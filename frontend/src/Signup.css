@@ -1,0 +1,101 @@
+/* Fullscreen background with a soft overlay */
+.signup-background {
+  background-image: url('https://source.unsplash.com/1920x1080/?programming,cloud');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form container */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Labels */
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+/* Inputs */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Checkbox area */
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-checkbox input {
+  margin-right: 8px;
+}
+
+/* Button */
+.form-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #218838;
+}
+
+/* Links */
+.form-links {
+  margin-top: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-links button {
+  background: none;
+  border: none;
+  color: #28a745;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.form-links button:hover {
+  color: #1e7e34;
+}
