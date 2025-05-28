@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excel Analysis Web Page</title>
+  <link rel="stylesheet" href="final.css">
+</head>
+<body>
+  <header>
+    <h1>Excel Analysis</h1>
+    <!-- Top part with logo and buttons -->
+    <div class="top-header">
+      
+      <div class="logo">MYLOGO</div>
+    </div>
+
+    <!-- Bottom navigation -->
+    <div class="bottom-nav">
+      <a onclick="loadContent('home')">Home</a>
+      <a onclick="loadContent('about Us')">About Us</a>
+      <a onclick="loadContent('charts')">Charts</a>
+      <a onclick="loadContent('reports')">Reports</a>
+      <a onclick="loadContent('help')">Help</a>
+    </div>
+  </header>
+
+
+  <!-- Action Buttons in Top Right (Main Area) -->
+  <div class="action-buttons">
+    <button class="signin-btn" onclick="showForm('signup')">Sign In</button>
+    <button class="login-btn" onclick="showForm('login')">Login</button>
+    <button class="trial-btn" onclick="loadContent('trial')">Start Free Trial</button>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="mainContent">
+    <h1>Welcome to Excel Analysis Platform</h1>
+    <p>Turn raw data into beautiful, insightful dashboards.</p>
+  </main>
+
+  <!-- Login Form -->
+  <div class="form-section" id="loginForm">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email ID" required />
+    <input type="password" placeholder="Password" required />
+    <a href="#" class="link">Forgot Password?</a>
+    <button type="submit">Submit</button>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div class="form-section" id="signupForm">
+    <h2>Sign Up</h2>
+    <input type="text" placeholder="First Name" required />
+    <input type="text" placeholder="Last Name" required />
+    <input type="text" placeholder="Username" required />
+    <input type="email" placeholder="Email ID" required />
+    <input type="password" placeholder="Password" required />
+    <input type="password" placeholder="Confirm Password" required />
+    <button type="submit">Register</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 YourWebsite. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showForm(formType) {
+      document.getElementById("mainContent").style.display = "none";
+      document.getElementById("loginForm").style.display = formType === 'login' ? "block" : "none";
+      document.getElementById("signupForm").style.display = formType === 'signup' ? "block" : "none";
+    }
+
+    function loadContent(section) {
+      document.getElementById("mainContent").style.display = "block";
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("signupForm").style.display = "none";
+
+      let content = '';
+      switch(section) {
+        case 'home':
+          content = "<h1>Home</h1><p>Welcome to Excel Analyzer, your all-in-one solution for transforming raw Excel data into insightful visual stories. Whether you're a student, analyst, or business professional, our platform empowers you to analyze, visualize, and share data with ease.With powerful graphing tools, customizable dashboards, and export features, you'll never struggle with spreadsheets again.</p>";
+          break;
+        case 'about Us':
+          content = "<h1>About Us</h1><p>At Excel Analyzer, we believe data should speak clearly. Founded with the mission to simplify data analysis for everyone, we built a platform that makes working with Excel files intuitive and powerful.From smart visualizations to real-time analysis and seamless export options, our tool is designed to turn your spreadsheets into business intelligence dashboards—without needing any coding knowledge.</p>";
+          break;
+        case 'charts':
+          content = "<h1>Charts</h1><p>Visualize your Excel data effortlessly with our smart charting engine. Choose from a variety of graph types including:Line Charts,Bar & Column Charts,Pie & Donut Charts,Area & Scatter Plots,Combo & Multi-axis Graphs.Customize every element, apply filters, and preview real-time changes. Easily download charts as PNG or PDF for your presentations or reports.</p>";
+          break;
+        case 'reports':
+          content = "<h1>Reports</h1><p>Generate dynamic, clean, and professional reports from your Excel files. Our reporting tools allow you to:Summarize data insights automatically,Export detailed PDFs with graphs,Share custom dashboards,Include filters, slicers, and formatted tables.</p>";
+          break;
+        case 'help':
+          content = "<h1>Help</h1><p>Need assistance? We've got you covered. Getting Started: Learn how to upload, analyze, and visualize data , Tutorial Videos: Step-by-step walkthroughs of every feature, FAQs: Common questions answered clearly, Support: Contact our team anytime for personalized help.</p>";
+          break;
+        case 'trial':
+          content = "<h1>Free Trial</h1><p>Sign In Now and Start your 15-day free trial. </p>";
+          break;
+      }
+
+      document.getElementById("mainContent").innerHTML = content;
+    }
+  </script>
+
+</body>
+</html>
