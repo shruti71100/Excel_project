@@ -1,4 +1,4 @@
-/* Fullscreen background with a soft overlay */
+
 .login-background {
   background-image: url('https://source.unsplash.com/1920x1080/?technology,abstract');
   background-size: cover;
@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-/* Form container */
+
 .form-container {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 40px;
@@ -21,7 +21,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Title */
+
 .form-title {
   text-align: center;
   font-size: 28px;
@@ -29,7 +29,7 @@
   color: #333;
 }
 
-/* Labels */
+
 .form-label {
   font-size: 14px;
   font-weight: 600;
@@ -38,7 +38,7 @@
   color: #333;
 }
 
-/* Inputs */
+
 .form-input {
   width: 100%;
   padding: 12px;
@@ -49,7 +49,7 @@
   box-sizing: border-box;
 }
 
-/* Checkbox area */
+
 .form-checkbox {
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@
   margin-right: 8px;
 }
 
-/* Button */
+
 .form-button {
   width: 100%;
   padding: 12px;
